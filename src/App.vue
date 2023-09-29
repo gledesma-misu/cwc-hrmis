@@ -1,14 +1,17 @@
 <template>
   <div>
+    <Sidebar />
+    <div :style="{ 'margin-left': sidebarWidth }">
     <RouterView/>
+  </div>
   </div>
 </template>
 
 <script>
 import { ref } from 'vue';
 import Sidebar from './components/Sidebar/Sidebar.vue'
-import Login from "./components/UserLogin.vue";
-// import Login from './views/UserLoginView.vue'
+// import Login from "./components/UserLogin.vue";
+import Login from './views/UserLoginView.vue'
 
 export default {
   data() {
@@ -25,6 +28,9 @@ export default {
     }
   },
 };
+</script>
+<script setup>
+  import { sidebarWidth } from './components/Sidebar/state';
 </script>
 
 

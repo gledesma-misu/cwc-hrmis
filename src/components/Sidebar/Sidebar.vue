@@ -2,19 +2,18 @@
     <div class="sidebar" :style="{ width: sidebarWidth }">
         <h5 class="icon">
             <span v-if="collapsed">
-               <i class="fas fa-home"></i>
+                <i class="fa-solid fa-bars"></i>
             </span>
-            <div v-else><i class="fas fa-home"></i> CWC-HRMIS</div>
-        </h5>
-        
-        <!-- <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink> -->
+            <div v-else> CWC-HRMIS</div>
+        </h5> 
+      
         <SidebarLink to="/dashboard" icon="fas fa-columns">Dashboard</SidebarLink>
         <hr class="hr hr-blurry" />
-        <SidebarLink to="/publishment" icon="fa-solid fa-folder">Recruitment</SidebarLink>
+        <SidebarLink to="/selfservice" icon="fa-solid fa-folder">Self-service Menu</SidebarLink>
         <hr class="hr hr-blurry" />
         <SidebarLink to="/personnel" icon="fa-solid fa-envelope">Personnel</SidebarLink>
         <hr class="hr hr-blurry" />
-        <SidebarLink to="/" icon="fa-solid fa-print">Reports</SidebarLink>
+        <!-- <SidebarLink to="/" icon="fa-solid fa-print">Reports</SidebarLink>
         <hr class="hr hr-blurry" />
         <SidebarLink to="/" icon="fa-solid fa-calendar-week">Attendance</SidebarLink>
         <hr class="hr hr-blurry" />
@@ -24,11 +23,11 @@
         <hr class="hr hr-blurry" />
         <SidebarLink to="/" icon="fa-solid fa-lock">Access Control</SidebarLink>
         <hr class="hr hr-blurry" />
-        <SidebarLink to="/" icon="fa-solid fa-lock-open">Change Password</SidebarLink>
+        <SidebarLink to="/" icon="fa-solid fa-lock-open">Change Password</SidebarLink> -->
 
-        <!-- <span class="collapse-icon" :class="{ 'rotate-180': collapsed }" @click="toggleSidebar">
+        <span class="collapse-icon" :class="{ 'rotate-180': collapsed }" @click="toggleSidebar">
             <i class="fas fa-angle-double-left" />
-        </span> -->
+        </span>
     </div>
 </template>
   
