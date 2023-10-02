@@ -2,8 +2,9 @@
   <div>
     <Sidebar />
     <div :style="{ 'margin-left': sidebarWidth }">
-    <RouterView/>
-  </div>
+      <RouterView />
+    </div>
+
   </div>
 </template>
 
@@ -14,23 +15,21 @@ import Sidebar from './components/Sidebar/Sidebar.vue'
 import Login from './views/UserLoginView.vue'
 
 export default {
+  components: {
+    Sidebar,
+    Login
+  },
   data() {
     return {
-      authenticated: false,
+      loggedIn: false
     };
-  },
-  created() {
-    // Check if the user is already authenticated (e.g., by checking a token in local storage)
-    // You can replace this with your actual authentication logic
-    const isAuthenticated = localStorage.getItem('authenticated');
-    if (isAuthenticated === 'true') {
-      this.authenticated = true;
-    }
-  },
+  }
+
+
 };
 </script>
 <script setup>
-  import { sidebarWidth } from './components/Sidebar/state';
+import { sidebarWidth } from './components/Sidebar/state';
 </script>
 
 

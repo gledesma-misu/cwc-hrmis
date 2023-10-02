@@ -20,7 +20,6 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: DashboardView,
-      meta: { requiresAuth: true },
     },
     {
       path: '/registration',
@@ -41,22 +40,6 @@ const router = createRouter({
   ]
 })
 
-// Add a navigation guard to check authentication status
-router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-    // Check if the user is authenticated (you can implement your own logic here)
-    const isAuthenticated = /* Implement your authentication logic here */ true;
 
-    if (!isAuthenticated) {
-      // Redirect to the login page if not authenticated
-      next('/login');
-    } else {
-      // Proceed to the requested route if authenticated
-      next();
-    }
-  } else {
-    next(); // Allow access to routes that don't require authentication
-  }
-});
 
 export default router
