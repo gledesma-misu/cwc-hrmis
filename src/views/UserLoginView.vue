@@ -15,13 +15,38 @@
         <button type="button" class="register-button" @click="goToRegistration">Register</button>
       </div>
     </form>
-    <p class="error" v-if="errorMessage">{{ errorMessage }}</p>
+    <div v-if="isLoggedIn" class="alert alert-success mt-3" role="alert">
+      Logged in successfully!
+    </div>
+    <div v-if="error" class="alert alert-danger mt-3" role="alert">
+      Invalid username or password. Please try again.
+    </div>
   </div>
 </template>
   
 <script>
 export default {
-  
+  data() {
+    return {
+      username: '',
+      password: '',
+      isLoggedIn: false,
+      error: false,
+    };
+  },
+  methods: {
+    login() {
+      if (this.username === 'admin' && this.password === 'admin') {
+        this.isLoggedIn = true;
+        this.error = false;
+        localStorage.setItem('isLoggedIn', 'true'); 
+        this.$router.push({ name: 'dashboard' });
+      } else {
+        this.isLoggedIn = false;
+        this.error = true;
+      }
+    }
+  }
 };
 </script>
   

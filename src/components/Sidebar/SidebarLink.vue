@@ -45,12 +45,13 @@ export default {
   cursor: pointer;
   position: relative;
   font-weight: 400;
+  font-size: medium;
   user-select: none;
 
-  margin: 0.1em 0;
-  padding: 0.4em;
-  border-radius: 0.25em;
-  height: 1.5em;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  border-radius: 0.40em;
+  height: 2.5em;
 
   color: white;
   text-decoration: none;
@@ -66,7 +67,8 @@ export default {
 
 .link .icon {
   flex-shrink: 0;
-  width: 25px;
+  /* width: 50px; */
+  padding: .4em;
   margin-right: 10px;
 }
 </style>

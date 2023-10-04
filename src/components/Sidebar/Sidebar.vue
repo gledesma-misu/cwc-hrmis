@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth }">
-    <h5 class="icon">
+    <h5 class="logo">
       <span v-if="collapsed">
         <i class="fa-solid fa-bars "></i>
       </span>
@@ -12,7 +12,7 @@
     <SidebarLink to="/" icon="fas fa-columns">Recruitment</SidebarLink>
     <hr class="hr hr-blurry" />
     <SidebarLink to="/" icon="fas fa-columns">Personnel</SidebarLink>
-    <hr class="hr hr-blurry" />
+    <!-- <hr class="hr hr-blurry" />
     <SidebarLink to="/" icon="fas fa-columns">Reports</SidebarLink>
     <hr class="hr hr-blurry" />
     <SidebarLink to="/" icon="fas fa-columns">Attendance</SidebarLink>
@@ -24,10 +24,8 @@
     <SidebarLink to="/" icon="fas fa-columns">Access Control</SidebarLink>
     <hr class="hr hr-blurry" />
     <SidebarLink to="/login" icon="fas fa-columns">Logout</SidebarLink>
-    <hr class="hr hr-blurry" />
-  
+    <hr class="hr hr-blurry" /> -->
 
-   
 
     <span
       class="collapse-icon"
@@ -42,12 +40,10 @@
 <script>
 import SidebarLink from "./SidebarLink.vue";
 import { collapsed, toggleSidebar, sidebarWidth } from "./state";
-import AppDropdown from "./Dropdown.vue";
-import AppDropdownContent from "./DropdownContent.vue";
-import AppDropdownItem from "./DropdownItem.vue";
+
 
 export default {
-  components: { SidebarLink, AppDropdown, AppDropdownContent, AppDropdownItem },
+  components: { SidebarLink},
   setup() {
     return { collapsed, toggleSidebar, sidebarWidth };
   },
@@ -74,31 +70,28 @@ export default {
   top: 0;
   left: 0;
   bottom: 0;
-  padding: 0.5em;
+  padding: 1.2em;
 
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 
   display: flex;
   flex-direction: column;
 }
 
-.sidebar icon {
-  height: 50px;
+.sidebar logo {
+  height: 150px;
 }
 
-.icon {
-  padding: 10%;
+.logo {
+  padding: 15%;
   text-align:center;
 }
 
-.title{
-  text-align:center;
-}
 
 .collapse-icon {
   position: absolute;
-  padding: 0.9em;
- 
+  /* padding: 0.5em; */
+  left: 40%;
   color: rgba(255, 255, 255, 0.7);
   bottom: 30%;
   transition: 0.2s linear;
