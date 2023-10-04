@@ -13,7 +13,6 @@
         </nav>
         <transition name="fade" mode="out-in">
             <div class="tab-content">
-                <!-- <router-view></router-view> -->
                 <slot :name="tabs[activeTab].name"></slot>
             </div>
         </transition>
