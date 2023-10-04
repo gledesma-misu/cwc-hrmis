@@ -17,11 +17,12 @@
               </span>
               <span class="text">Create Announcement</span>
             </a>
+            
             <!-- Attendance Button -->
             
-            <a href="#" class="btn btn-success btn-icon-split">
+            <a href="#" class="btn btn-success btn-icon-split ms-1">
               <span class="icon text-white-50">
-                <i class="fas fa-board"></i>
+                <i class="fas fa-clipboard-user"></i>
               </span>
               <span class="text">Today's Attendance</span>
             </a>
