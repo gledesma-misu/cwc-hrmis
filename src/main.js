@@ -14,6 +14,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
 dom.watch();
+import VueClickAway from "vue3-click-away";
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -22,7 +23,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 
 const app = createApp(App)
 app.component("font-awesome-icon", FontAwesomeIcon);
-
+app.use(VueClickAway) 
 app.use(router)
 
 app.mount('#app')
