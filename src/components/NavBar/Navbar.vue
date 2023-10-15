@@ -5,8 +5,8 @@
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item" role="presentation" v-for="(tab, index) in tabs" :key="index"
                         :class="{ active: index === activeTab }">
-                        <button class="nav-link" @click="activeTab = index">{{ tab.label }}</button>
-                        <!-- <router-link :to="tab.to">{{ tab.label }}</router-link> -->
+                        <!-- <button class="nav-link" @click="activeTab = index">{{ tab.label }}</button> -->
+                        <router-link :to="tab.to">{{ tab.label }}</router-link>
                     </li>
                 </ul>
             </transition-group>

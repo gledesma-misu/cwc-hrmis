@@ -1,13 +1,13 @@
 <template>
-    <Sidebar />
-    <div :style="{ 'margin-left': sidebarWidth }">
+
+   
         <div class="container">
         </div>
-    </div>
+
 </template>
 
 <script>
-import Sidebar from '../components/Sidebar/Sidebar.vue'
+import Sidebar from '../components/Sidebar.vue'
 import Navbar from '../components/NavBar/Navbar.vue'
 
 export default {

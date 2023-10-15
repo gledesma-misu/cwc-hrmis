@@ -3,64 +3,92 @@ import Login from '@/views/UserLoginView.vue';
 import DashboardView from '../views/DashboardView.vue'
 import SelfServiceView from '../views/SelfServiceView.vue'
 import UserRegistrationView from '../views/UserRegistrationView.vue'
-import RecPublishmentView from '../views/RecPublishmentView.vue'
+import RecruitmentView from '../views/RecruitmentView.vue'
 import PersonnelView from '../views/PersonnelView.vue'
 import ReportsView from '../views/ReportsView.vue'
 import AttendanceView from '../views/AttendanceView.vue'
 import LibrariesView from '../views/LibrariesView.vue'
 import AccessControlView from '../views/AccessControlView.vue'
 
+// Recruitment Router
+import PublishingView from '../views/RecPublishment/RecPublishingView.vue'
+import ApplicantsView from '../views/RecPublishment/ApplicantsView.vue'
+import JobLibrariesView from '../views/RecPublishment/JobLibrariesView.vue'
+import EmployeeTrainingsView from '../views/RecPublishment/EmployeeTrainingsView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/', redirect: '/login'
+      path: '/', redirect: '/hrmis/login'
     }, // Redirect to login by default
     {
-      path: '/login', component: () => import('@/views/UserLoginView.vue')
+      path: '/hrmis/login', component: () => import('@/views/UserLoginView.vue')
     },
 
     {
-      path: '/dashboard',
+      path: '/hrmis/dashboard',
       name: 'dashboard',
       component: DashboardView,
     },
     {
-      path: '/registration',
+      path: '/hrmis/registration',
       name: 'registration',
       component: UserRegistrationView
     },
     {
-      path: '/selfservice',
+      path: '/hrmis/selfservice',
       name: 'selfservice',
       component: SelfServiceView
     },
     {
-      path: '/personnel',
+      path: '/hrmis/recruitment',
+      name: 'recruitment',
+      component: RecruitmentView
+    },
+    {
+      path: '/hrmis/personnel',
       name: 'personnel',
       component: PersonnelView
     },
     {
-      path: '/reports',
+      path: '/hrmis/reports',
       name: 'reports',
       component: ReportsView
     },
     {
-      path: '/attendance',
+      path: '/hrmis/attendance',
       name: 'attendance',
       component: AttendanceView
     },
     {
-      path: '/libraries',
+      path: '/hrmis/libraries',
       name: 'libraries',
       component: LibrariesView
     },
     {
-      path: '/accesscontrol',
+      path: '/hrmis/accesscontrol',
       name: 'accesscontrol',
       component: AccessControlView
     },
+    // Recruitment
+    {
+      path: '/hrmis/recruitment/publishing',
+      name: 'publishing',
+      component: PublishingView
+    },
+    {
+      path: '/hrmis/recruitment/applicants',
+      name: 'applicants',
+      component: ApplicantsView
+    },
+    {
+      path: '/hrmis/recruitment/employeetrainings',
+      name: 'employeetrainings',
+      component: EmployeeTrainingsView
+    },
 
+    
   ]
 })
 

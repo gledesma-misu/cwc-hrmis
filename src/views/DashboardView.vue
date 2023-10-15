@@ -2,24 +2,16 @@
   <div id="content-wrapper" class="d-flex flex-column">
     <div class="content">
       <Header>
-
       </Header>
       <div class="container-fluid">
         <!-- Page Heading -->
         <h1 class="h3 mb-3 text-gray-800">Dashboard</h1>
+
         <div class="row">
-          
+
           <div class="col-lg-6">
-            <!-- Announcement Button -->
-            <a href="#" class="btn btn-primary btn-icon-split">
-              <span class="icon text-white-50">
-                <i class="fas fa-flag"></i>
-              </span>
-              <span class="text">Create Announcement</span>
-            </a>
-            
             <!-- Attendance Button -->
-            
+
             <a href="#" class="btn btn-success btn-icon-split ms-1">
               <span class="icon text-white-50">
                 <i class="fas fa-clipboard-user"></i>
@@ -27,7 +19,7 @@
               <span class="text">Today's Attendance</span>
             </a>
           </div>
-         
+
         </div>
         <div class="my-2"></div>
         <!-- First Row -->
@@ -110,51 +102,8 @@
         </div>
         <!-- Second Row -->
         <div class="row">
-          <!-- First Column -->
-          <div class="col-lg-6">
-
-            <!--Upcoming Events Card Example -->
-            <div class="card mb-4">
-              <div class="card-header">
-                <h6 class="m-0 font-weight-bold text-primary">Upcoming Events</h6>
-              </div>
-              <div class="card-body">
-
-              </div>
-            </div>
-
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-4">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Attendance</h6>
-              </div>
-              <div class="card-body">
-
-              </div>
-            </div>
-          </div>
-          <!-- Second Column -->
-          <div class="col-lg-6">
-            <!-- Basic Card Example -->
-            <div class="card shadow mb-0">
-              <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Announcement</h6>
-              </div>
-              <div class="card-body">
-                What is Lorem Ipsum?
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                to make a
-                type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining
-                essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages,
-                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-                Ipsum.
-              </div>
-            </div>
-          </div>
+          <h1 class="h3 mb-3 text-gray-800">Employee List</h1>
+          <EmpList />
         </div>
       </div>
     </div>
@@ -162,11 +111,10 @@
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
 
-import Sidebar from '../components/Sidebar/Sidebar.vue'
+import EmpList from '../components/EmpList.vue'
 import Header from '../components/Header/Header.vue'
-import { sidebarWidth } from '../components/Sidebar/state'
+
 </script>
 
 <style scoped>

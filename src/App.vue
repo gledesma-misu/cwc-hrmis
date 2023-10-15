@@ -1,21 +1,23 @@
 <template>
   <!-- <Login></Login>
   <Login v-if="isLoggedIn"> -->
-  <Sidebar />
-  <div class="content" :style="{ 'margin-left': sidebarWidth }">
+
+  <Sidebar>
     <RouterView />
-  </div>
- <!-- </Login> -->
+  </Sidebar>
+  <!-- </Login> -->
 </template>
 
 <script>
 
 
-import Sidebar from "./components/Sidebar/Sidebar.vue";
+import Sidebar from "./components/Sidebar.vue";
 // import Login from "./components/UserLogin.vue";
 import Login from "./views/UserLoginView.vue";
 
 export default {
+
+
   props: {
     ifLoggedIn: Boolean // Prop to determine if user is logged in
   },
@@ -25,14 +27,10 @@ export default {
   },
   data() {
     return {
-      
+
     };
   },
 };
-</script>
-<script setup>
-import { sidebarWidth } from "./components/Sidebar/state";
-
 </script>
 
 
@@ -50,7 +48,8 @@ import { sidebarWidth } from "./components/Sidebar/state";
 main {
   display: flex;
 }
-.content{
+
+.content {
   transition: 0.3s linear;
 }
 </style>
