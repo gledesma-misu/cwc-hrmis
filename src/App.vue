@@ -10,26 +10,17 @@
 
 <script>
 
-
 import Sidebar from "./components/Sidebar.vue";
 // import Login from "./components/UserLogin.vue";
 import Login from "./views/UserLoginView.vue";
 
 export default {
 
-
-  props: {
-    ifLoggedIn: Boolean // Prop to determine if user is logged in
-  },
   components: {
     Sidebar,
     Login,
   },
-  data() {
-    return {
 
-    };
-  },
 };
 </script>
 

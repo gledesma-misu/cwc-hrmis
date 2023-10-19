@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Login from '@/views/UserLoginView.vue';
 import DashboardView from '../views/DashboardView.vue'
+import PayrollView from '../views/PayrollView.vue'
 import SelfServiceView from '../views/SelfServiceView.vue'
 import UserRegistrationView from '../views/UserRegistrationView.vue'
 import RecruitmentView from '../views/RecruitmentView.vue'
@@ -20,7 +21,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/', redirect: '/hrmis/login'
+      path: '/hrmis', redirect: '/hrmis/login'
     }, // Redirect to login by default
     {
       path: '/hrmis/login', component: () => import('@/views/UserLoginView.vue')
@@ -30,6 +31,11 @@ const router = createRouter({
       path: '/hrmis/dashboard',
       name: 'dashboard',
       component: DashboardView,
+    },
+    {
+      path: '/hrmis/payroll',
+      name: 'payroll',
+      component: PayrollView,
     },
     {
       path: '/hrmis/registration',
