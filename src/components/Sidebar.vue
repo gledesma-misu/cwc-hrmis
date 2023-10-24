@@ -14,7 +14,7 @@
     @click="collapsed = true"
   />
   <div id="demo" :class="[{ collapsed: collapsed }, { onmobile: isOnMobile }]">
-    <Header />
+    <!-- <Header /> -->
     <div class="demo">
       <slot></slot>
     </div>

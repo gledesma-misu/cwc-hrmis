@@ -1,16 +1,36 @@
 <template>
   <div>
     <h1>Payroll</h1>
-    <p>Message is: {{ message }}</p>
-    <input v-model="message" placeholder="edit me" />
+
+
+    <div v-if="showModal">
+      <Modal   @close="toggleModal">
+         <template #sample>asd</template>
+      </Modal>
+    </div>
+    <button @click="toggleModal">Open Modal</button>
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script >
 
-const message = ref('')
+import Modal from  "../components/Modal.vue";
+
+  export default {
+    components: {Modal},
+    data(){
+      return{
+        header: 'Header',
+        showModal: false
+      }
+    },
+    methods: {
+      toggleModal(){
+        this.showModal = !this.showModal
+      }
+    },
+  }
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 </style>
