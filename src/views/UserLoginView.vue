@@ -45,8 +45,12 @@ export default {
         this.isLoggedIn = false;
         this.error = true;
       }
+    },
+    goToRegistration(){
+      console.log('Registration');
     }
   }
+  
 };
 </script>
   

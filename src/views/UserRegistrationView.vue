@@ -29,7 +29,7 @@ export default {
         };
     },
     methods: {
-        register() {
+        d() {
             // Handle registration logic here
         },
     },

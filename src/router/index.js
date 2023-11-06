@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from '@/views/UserLoginView.vue';
 import DashboardView from '../views/DashboardView.vue'
 import PayrollView from '../views/PayrollView.vue'
 import SelfServiceView from '../views/SelfServiceView.vue'
@@ -10,6 +9,8 @@ import ReportsView from '../views/ReportsView.vue'
 import AttendanceView from '../views/AttendanceView.vue'
 import LibrariesView from '../views/LibrariesView.vue'
 import AccessControlView from '../views/AccessControlView.vue'
+
+import Ping from '../views/Ping.vue'
 
 // Recruitment Router
 import PublishingView from '../views/RecPublishment/RecPublishingView.vue'
@@ -26,7 +27,12 @@ const router = createRouter({
     {
       path: '/hrmis/login', component: () => import('@/views/UserLoginView.vue')
     },
-
+    {
+      path: '/hrmis/registration', component: () => import('@/views/UserRegistrationView.vue')
+    },
+    {
+      path: '/hrmis/ping', name: 'ping', component: Ping,
+    },
     {
       path: '/hrmis/dashboard',
       name: 'dashboard',
@@ -94,7 +100,7 @@ const router = createRouter({
       component: EmployeeTrainingsView
     },
 
-    
+
   ]
 })
 

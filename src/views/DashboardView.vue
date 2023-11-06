@@ -26,9 +26,7 @@
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div
-                      class="text-xs font-weight-bold text-primary text-uppercase mb-1"
-                    >
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                       Total Employee
                     </div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">
@@ -49,17 +47,13 @@
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div
-                      class="text-xs font-weight-bold text-success text-uppercase mb-1"
-                    >
+                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                       On-leave Employees
                     </div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
                   </div>
                   <div class="col-auto">
-                    <i
-                      class="fas fa-person-walking-luggage fa-2x text-gray-300"
-                    ></i>
+                    <i class="fas fa-person-walking-luggage fa-2x text-gray-300"></i>
                   </div>
                 </div>
               </div>
@@ -72,9 +66,7 @@
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div
-                      class="text-xs font-weight-bold text-info text-uppercase mb-1"
-                    >
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                       Pending Applicants
                     </div>
                     <div class="row no-gutters align-items-center">
@@ -99,9 +91,7 @@
               <div class="card-body">
                 <div class="row no-gutters align-items-center">
                   <div class="col mr-2">
-                    <div
-                      class="text-xs font-weight-bold text-warning text-uppercase mb-1"
-                    >
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                       Pending Leave Requests
                     </div>
                     <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
